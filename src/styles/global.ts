@@ -9,9 +9,10 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${(props) =>
-      props.theme.colors.background_300};
-    color: ${(props) => props.theme.colors.white};
+    background: ${({ theme }) =>
+      theme.colors["gray_900"]};
+    color: ${({ theme }) =>
+      theme.colors["white"]};
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
