@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
+interface PieChartProps {
+  children?: React.ReactNode;
+  ValorAlcancado?: number;
+  ValorEsperado?: number;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;  
-
+  gap: 2rem;
 
   > h2 {
     font-size: 1.5rem;
@@ -17,18 +22,31 @@ export const Container = styled.div`
   }
 `;
 
-export const Chart = styled.div`
-  display: block;
-  width: 197px;
-  border-radius: 50%;
+export const Chart = styled.div<PieChartProps>`
+  position: relative;
 
-  & div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1rem solid
-      ${({ theme }) => theme.colors["white"]};
+  & svg {
+    width: 12.3rem;
+    height: 12.3rem;
+    transform: rotate(-90deg);
+
+    > circle {
+      fill: none;
+      stroke-width: 2rem;
+      stroke-dasharray: 618;
+      stroke-dashoffset: 618;
+    }
+    //calculo do stroke-dashoffset e stroke-dasharray para o svg é: PI(3,14) * width (197) = 618,58
+
+    > circle:nth-child(1) {
+      stroke-dashoffset: 0;
+    }
+
+    > circle:nth-child(2) {
+      stroke-dashoffset: calc(
+        618 - (618 * 30) / 100
+      );
+    }
   }
 `;
 

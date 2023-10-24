@@ -12,7 +12,7 @@ export function Dashboard() {
         </Card>
 
         <Card>
-          <PieChart />
+          <PieChart ValorAlcancado={70} />
         </Card>
 
         <Card>index</Card>

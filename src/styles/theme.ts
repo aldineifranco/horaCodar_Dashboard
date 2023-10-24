@@ -1,6 +1,7 @@
 export default {
   colors: {
     gray_900: "#242424",
+    gray_800: "#292929",
 
     background_300: "#292738",
     background_100: "#363447",
