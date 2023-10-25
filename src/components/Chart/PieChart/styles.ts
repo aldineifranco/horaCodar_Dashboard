@@ -44,6 +44,15 @@ export const Chart = styled.div<PieChartProps>`
       stroke-dashoffset: calc(
         618 - (618 * ${({ valorAlcancado }) => valorAlcancado }) / 100
       );
+      stroke-linecap: round;
+      animation: progress 1s ease-in-out backwards;
+    }
+
+    @keyframes progress {
+      0% {
+        stroke-dasharray: 618;
+        stroke-dashoffset: 618;
+      }
     }
   }
 `;
