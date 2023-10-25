@@ -1,19 +1,16 @@
 import { Chart, Container, Legend } from './styles'
-
-interface PieChartProps {
-  children?: React.ReactNode;
-  ValorAlcancado?: number;
-  ValorEsperado?: number;
-}
+import { PieChartProps } from '../../../interfaces/PieChartProps'
 
 
-export function PieChart({ ValorAlcancado, ValorEsperado }: PieChartProps) {
+export function PieChart({ valorAlcancado, valorEsperado }: PieChartProps) {
+  
+
   return (
     <Container>
 
       <h2>Vendas Fechadas</h2>
 
-      <Chart>
+      <Chart valorAlcancado={valorAlcancado} valorEsperado={valorEsperado}>
         <div>
           <svg viewBox='0 0 232 232'>
             <circle
@@ -22,6 +19,7 @@ export function PieChart({ ValorAlcancado, ValorEsperado }: PieChartProps) {
               r="98.5"
               stroke="#D9D9D9"
               opacity="0.1"
+         
             />
 
             <circle
@@ -29,6 +27,7 @@ export function PieChart({ ValorAlcancado, ValorEsperado }: PieChartProps) {
               cy="50%"
               r="98.5"
               stroke='url(#paint0)'
+              
             />
 
             <defs>
@@ -47,7 +46,7 @@ export function PieChart({ ValorAlcancado, ValorEsperado }: PieChartProps) {
         </div>
 
         <div>
-          <h2>{ValorAlcancado}</h2>
+          <h2>{valorAlcancado}</h2>
         </div>
        
       </Chart>
@@ -59,7 +58,7 @@ export function PieChart({ ValorAlcancado, ValorEsperado }: PieChartProps) {
             <p>Esperado</p>
           </div>
 
-          <p>100</p>
+          <p>{valorEsperado}</p>
         </div>
 
         <div>
@@ -68,7 +67,7 @@ export function PieChart({ ValorAlcancado, ValorEsperado }: PieChartProps) {
             <p>Alcançado</p>
           </div>
 
-          <p>70</p>
+          <p>{valorAlcancado}</p>
         </div>
       </Legend>
 

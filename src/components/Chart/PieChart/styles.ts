@@ -1,10 +1,6 @@
 import styled from "styled-components";
+import { PieChartProps } from "../../../interfaces/PieChartProps";
 
-interface PieChartProps {
-  children?: React.ReactNode;
-  ValorAlcancado?: number;
-  ValorEsperado?: number;
-}
 
 export const Container = styled.div`
   display: flex;
@@ -39,12 +35,14 @@ export const Chart = styled.div<PieChartProps>`
     //calculo do stroke-dashoffset e stroke-dasharray para o svg é: PI(3,14) * width (197) = 618,58
 
     > circle:nth-child(1) {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: calc(
+        618 - (618 * ${({ valorEsperado }) => valorEsperado }) / 100
+      );;
     }
 
     > circle:nth-child(2) {
       stroke-dashoffset: calc(
-        618 - (618 * 30) / 100
+        618 - (618 * ${({ valorAlcancado }) => valorAlcancado }) / 100
       );
     }
   }

@@ -1,6 +1,5 @@
 import { Container, Content } from './styles';
 import { Card } from '../../components/Card';
-import { LineChart } from '../../components/Chart/LineChart';
 import { PieChart } from '../../components/Chart/PieChart';
 
 export function Dashboard() {
@@ -12,7 +11,7 @@ export function Dashboard() {
         </Card>
 
         <Card>
-          <PieChart ValorAlcancado={70} />
+          <PieChart valorAlcancado={20} valorEsperado={100} />
         </Card>
 
         <Card>index</Card>
