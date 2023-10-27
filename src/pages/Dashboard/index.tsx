@@ -1,4 +1,4 @@
-import { Container, Content } from './styles';
+import { Container, Content, NPSChart } from './styles';
 import { Card } from '../../components/Card';
 import { PieChart } from '../../components/Chart/PieChart';
 
@@ -7,7 +7,10 @@ export function Dashboard() {
     <Container>
       <Content>
         <Card>
-          Status
+          <NPSChart>
+            <h2>NPS Geral</h2> 
+          </NPSChart>
+         
         </Card>
 
         <Card>
