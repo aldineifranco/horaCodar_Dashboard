@@ -2,6 +2,8 @@ export default {
   colors: {
     gray_900: "#242424",
     gray_800: "#292929",
+    gray_500: "#464556",
+    gray_100: "#D9D9D9",
 
     background_300: "#292738",
     background_100: "#363447",
@@ -19,4 +21,7 @@ export default {
 
     white: "#FFFFFF",
   },
+  gradient: {
+    alcancada: 'linear-gradient(90deg, #CE9FFC 0%, #7367F0 100%)',
+  }
 };

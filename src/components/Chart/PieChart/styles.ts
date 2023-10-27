@@ -25,6 +25,7 @@ export const Chart = styled.div<PieChartProps>`
     width: 12.3rem;
     height: 12.3rem;
     transform: rotate(-90deg);
+    position: relative;
 
     > circle {
       fill: none;
@@ -36,13 +37,23 @@ export const Chart = styled.div<PieChartProps>`
 
     > circle:nth-child(1) {
       stroke-dashoffset: calc(
-        618 - (618 * ${({ valorEsperado }) => valorEsperado }) / 100
-      );;
+        618 -
+          (
+            618 *
+              ${({ valorEsperado }) =>
+                valorEsperado}
+          ) / 100
+      );
     }
 
     > circle:nth-child(2) {
       stroke-dashoffset: calc(
-        618 - (618 * ${({ valorAlcancado }) => valorAlcancado }) / 100
+        618 -
+          (
+            618 *
+              ${({ valorAlcancado }) =>
+                valorAlcancado}
+          ) / 100
       );
       stroke-linecap: round;
       animation: progress 1s ease-in-out backwards;
@@ -53,6 +64,24 @@ export const Chart = styled.div<PieChartProps>`
         stroke-dasharray: 618;
         stroke-dashoffset: 618;
       }
+    }
+  }
+
+  & .number_pieChart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    > h2 {
+      font-size: 1.75rem;
+    }
+
+    > p {
+      font-size: 0.750rem;
+      color: ${({ theme }) => theme.colors["gray_100"]};
+      opacity: 0.7;
     }
   }
 `;
@@ -66,19 +95,28 @@ export const Legend = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
 
     & div {
       display: flex;
       align-items: center;
       gap: 0.2rem;
 
-      span {
+      .legend_esperado {
         display: block;
         width: 16px;
         height: 16px;
         background-color: ${({ theme }) =>
-          theme.colors["white"]};
+          theme.colors["gray_500"]};
+        border-radius: 50%;
+      }
+
+      .legend_alcancado {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: ${({ theme }) =>
+          theme.colors["violet_100"]};
         border-radius: 50%;
       }
 

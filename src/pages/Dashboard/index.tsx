@@ -11,10 +11,10 @@ export function Dashboard() {
         </Card>
 
         <Card>
-          <PieChart valorAlcancado={20} valorEsperado={100} />
+          <PieChart valorAlcancado={40} valorEsperado={100} />
         </Card>
 
-        <Card><PieChart valorAlcancado={40} valorEsperado={100} /></Card>
+        <Card><PieChart valorAlcancado={65} valorEsperado={100} /></Card>
       </Content>
       <Card>index</Card>
     </Container>

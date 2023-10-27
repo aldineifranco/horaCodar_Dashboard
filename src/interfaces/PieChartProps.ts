@@ -1,4 +1,4 @@
 export interface PieChartProps {
-  valorAlcancado?: number;
-  valorEsperado?: number;
+  valorAlcancado: number;
+  valorEsperado: number;
 }
