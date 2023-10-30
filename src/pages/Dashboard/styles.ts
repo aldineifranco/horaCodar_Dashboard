@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   margin: 20vh auto;
@@ -7,7 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  background-color: ${({ theme }) => theme.colors.background_300};
+  background-color: ${({ theme }) =>
+    theme.colors.background_300};
   padding: 2rem;
   border-radius: 1rem;
 `;
@@ -22,7 +23,6 @@ export const NPSChart = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
 
   > h2 {
     font-size: 1.5rem;
@@ -30,5 +30,5 @@ export const NPSChart = styled.div`
     color: ${({ theme }) =>
       theme.colors["white"]};
     text-align: center;
-  }  
+  }
 `;
