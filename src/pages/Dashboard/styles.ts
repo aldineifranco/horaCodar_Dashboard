@@ -23,6 +23,7 @@ export const NPSChart = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 
   > h2 {
     font-size: 1.5rem;
@@ -30,5 +31,9 @@ export const NPSChart = styled.div`
     color: ${({ theme }) =>
       theme.colors["white"]};
     text-align: center;
+  }
+
+  > img {
+    width: 100px;
   }
 `;
