@@ -4,12 +4,14 @@ export const Container = styled.div`
   background-color: ${({ theme }) =>
     theme.colors["gray_500"]};
   height: 100vh;
-  width: 180px;
+  width: 100vw;
   padding-top: 4rem;
 
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  grid-area: sidebar;
 
   div {
     display: flex;

@@ -1,13 +1,22 @@
 import { Sidebar } from "./components/Sidebar"
+import { SidebarProps } from "./interfaces/SidebarProps"
 import { Dashboard } from "./pages/Dashboard"
-import { Container } from "./styles"
+import { Container, Content } from "./styles"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-function App() {
+function App( {children}: SidebarProps ) {
   return (
-    <Container>
-      <Sidebar />
-      <Dashboard />
-    </Container>
+    <BrowserRouter>
+      <Container>
+        <Sidebar />
+
+        <Content>
+          {children}
+        </Content>
+
+      </Container>
+    </BrowserRouter>
+
   )
 }
 

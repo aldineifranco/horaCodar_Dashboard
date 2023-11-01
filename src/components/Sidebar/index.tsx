@@ -1,25 +1,24 @@
 import { Container } from "./styles";
 import { CiAlignBottom, CiCircleList, CiViewTable } from "react-icons/ci";
-
-interface SidebarProps {
-  name: string;
-  icon?: any;
-}
+import { NavLink } from "react-router-dom";
 
 export const Sidebar = () => {
 
   const SidebarItems = [
     {
       name: 'Dashboard',
-      icon: <CiAlignBottom />
+      icon: <CiAlignBottom />,
+      path: '/'
     },
     {
       name: 'Info',
-      icon: <CiCircleList />
+      icon: <CiCircleList />,
+      path: '/info'
     },
     {
       name: 'Table',
-      icon: <CiViewTable />
+      icon: <CiViewTable />,
+      path: '/table'
     },
   ]
 
@@ -28,10 +27,10 @@ export const Sidebar = () => {
       {
         SidebarItems.map((item) => {
           return (
-            <div>
+            <NavLink to={item.path}>
               {item.icon}
               <h2><a>{item.name}</a></h2>
-            </div>
+            </NavLink>
           )
         })
       }
