@@ -4,7 +4,6 @@ export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
   }
 
@@ -30,6 +29,6 @@ export default createGlobalStyle`
     }
 
     button:hover, a:hover {
-        filter: brightness(0.9);
+        filter: brightness(0.8);
     }
 `;

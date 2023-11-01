@@ -1,10 +1,13 @@
+import { Sidebar } from "./components/Sidebar"
 import { Dashboard } from "./pages/Dashboard"
+import { Container } from "./styles"
 
 function App() {
   return (
-    <div>
+    <Container>
+      <Sidebar />
       <Dashboard />
-    </div>
+    </Container>
   )
 }
 

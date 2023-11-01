@@ -3,46 +3,6 @@ import { Card } from '../../components/Card';
 import { PieChart } from '../../components/Chart/PieChart';
 import { LineChart } from '../../components/Chart/LineChart';
 import heapy from '../../assets/heapy.svg';
-import { LineChartProps } from '../../interfaces/LineChartProps';
-
-const salesWeek: LineChartProps[] = [
-  {
-    id: 1,
-    day: 'Domingo',
-    sales: 25
-  },
-  {
-    id: 2,
-    day: 'Segunda',
-    sales: 40
-  },
-  {
-    id: 3,
-    day: 'Terça',
-    sales: 60
-  },
-  {
-    id: 4,
-    day: 'Quarta',
-    sales: 20
-  },
-  {
-    id: 5,
-    day: 'Quinta',
-    sales: 50
-  },
-  {
-    id: 6,
-    day: 'Sexta',
-    sales: 10
-  },
-  {
-    id: 7,
-    day: 'Sábado',
-    sales: 12
-  },
-
-]
 
 
 export function Dashboard() {
