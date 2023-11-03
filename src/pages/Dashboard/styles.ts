@@ -1,16 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 20vh auto;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  background-color: ${({ theme }) =>
-    theme.colors.background_300};
+
   padding: 2rem;
-  border-radius: 1rem;
+  grid-area: content;
 `;
 
 export const Content = styled.div`

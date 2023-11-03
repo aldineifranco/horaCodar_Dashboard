@@ -1,23 +1,21 @@
 import { Sidebar } from "./components/Sidebar"
 import { SidebarProps } from "./interfaces/SidebarProps"
-import { Dashboard } from "./pages/Dashboard"
 import { Container, Content } from "./styles"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-function App( {children}: SidebarProps ) {
+export function App({ children }: SidebarProps) {
   return (
-    <BrowserRouter>
-      <Container>
-        <Sidebar />
 
-        <Content>
-          {children}
-        </Content>
+    <Container>
+  
+      <Sidebar />
 
-      </Container>
-    </BrowserRouter>
+      <Content>
+        {children}
+      </Content>
+
+    </Container>
+
 
   )
 }
 
-export default App

@@ -1,10 +1,11 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.aside`
+  grid-area: sidebar;
+
   background-color: ${({ theme }) =>
-    theme.colors["gray_500"]};
-  height: 100vh;
-  width: 100vw;
+    theme.colors["gray_800"]};
   padding-top: 4rem;
 
   display: flex;
@@ -12,8 +13,9 @@ export const Container = styled.div`
   gap: 0.5rem;
 
   grid-area: sidebar;
+`;	
 
-  div {
+  export const Menu = styled(NavLink)`
     display: flex;
     align-items: center;
     justify-content: start;
@@ -28,7 +30,7 @@ export const Container = styled.div`
     transition: border-color 0.5s;
 
     cursor: pointer;
-  }
+  
 
   div:hover {
     border-color: ${({ theme }) =>
@@ -36,7 +38,13 @@ export const Container = styled.div`
     filter: brightness(0.8);
   }
 
-  div h2 {
+  span {
+    font-size: 1.5rem;
+    color: ${({ theme }) => theme.colors["white"]};
+  }
+
+  h2 {
     font-size: 1rem;
+    color: ${({ theme }) => theme.colors["white"]};
   }
 `;

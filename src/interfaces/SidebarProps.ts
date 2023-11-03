@@ -1,8 +1,8 @@
-import React from "react";
+import { ReactNode } from "react";
 
 export interface SidebarProps {
-  name: string;
+  name?: string;
   icon?: any;
-  path: string;
-  children: React.ReactNode;
+  path?: string;
+  children?: ReactNode;
 }
